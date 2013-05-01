@@ -25,22 +25,14 @@
     {{/each}}
   </div>
 
-  {{#if selected_q}}
-  <div class="details">
-    <div class="q">{{selected_q}}</div>
-    <input type="button" class="inc" value="Vote up" />
-  </div>
-  {{/if}}
-
-  {{#unless selected_q}}
-  <div class="none">Click a Question to select</div>
-  {{/unless}}
 </template>
 
 <template name="question">
   <div class="question {{selected}}">
     <span class="name">{{q}}</span>
     <span class="score">{{score}}</span>
+	<input type="button" class="inc" value="Vote up" />
+	<input type="button" class="dec" value="Vote down" />
   </div>
 </template>
 
