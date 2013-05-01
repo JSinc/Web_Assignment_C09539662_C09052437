@@ -39,12 +39,12 @@ if (Meteor.isClient) {
   };
 
   Template.web_assignment_c09539662_c09052437.events({
-    'click input.inc': function () {
+    'click Button.inc': function () {
       Questions.update(Session.get("selected_q"), {$inc: {score: 1}});
     }
 	});
 	Template.web_assignment_c09539662_c09052437.events({
-	'click input.dec': function () {
+	'click Button.dec': function () {
       Questions.update(Session.get("selected_q"), {$inc: {score: -1}});
     }
   });
