@@ -48,6 +48,13 @@ if (Meteor.isClient) {
       Questions.update(Session.get("selected_q"), {$inc: {score: -1}});
     }
   });
+    Template.web_assignment_c09539662_c09052437.events({
+	'click input.add': function ()
+	{
+	var newQ = document.getElementById("newQ").value;
+	Questions.insert({q: newQ, score: 0});
+	}
+	});
 
   Template.question.events({
     'click': function () {
