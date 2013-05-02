@@ -27,12 +27,16 @@ Questions = new Meteor.Collection("questions");
 if (Meteor.isClient) {
 	
   Template.web_assignment_c09539662_c09052437.questions = function () {
-    return Questions.find({}, {sort: {score: -1, q: 1}});
+    return Questions.find({}, {sort: {score: -1, q: 1, desc: 1}});
   };
 
   Template.web_assignment_c09539662_c09052437.selected_q = function () {
     var question = Questions.findOne(Session.get("selected_q"));
-    return question && question.q;
+    return question && question.q ;
+  };
+    Template.web_assignment_c09539662_c09052437.selected_desc = function () {
+    var question = Questions.findOne(Session.get("selected_q"));
+    return question && question.desc ;
   };
 
   Template.question.selected = function () {
@@ -52,9 +56,10 @@ if (Meteor.isClient) {
     Template.web_assignment_c09539662_c09052437.events({
 	'click Button.add': function () {
 	var newQ = document.getElementById("newQ").value; 
+	var newD = document.getElementById("newD").value;
 	if (newQ.length < 80)
 	{
-	Questions.insert({q: newQ, score: 0});
+	Questions.insert({q: newQ, desc: newD, score: 0});
 	}
 	else
 	{
@@ -99,7 +104,7 @@ Accounts.loginServiceConfiguration.remove({
                    "spa",
                    "yeah"];
       for (var i = 0; i < qs.length; i++)
-        Questions.insert({q: qs[i], score: Math.floor(Random.fraction()*10)*5});
+        Questions.insert({q: qs[i], desc: "", score: Math.floor(Random.fraction()*10)*5});
     }
   });
 }

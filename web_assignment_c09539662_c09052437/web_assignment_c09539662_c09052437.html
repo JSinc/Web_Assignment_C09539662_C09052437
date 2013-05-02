@@ -78,11 +78,17 @@
     	{{#each questions}}
 			{{> question}}
 		{{/each}}
+{{#if selected_desc}}
+	<div style="float: right; width: 50%" class="blah">
+		<div class="desc">{{selected_q}}</div>
+		<div class="q">{{selected_desc}}</div>
+	</div>
+{{/if}}
 	</div>
  {{#if currentUser}}
 		<div class="new-question" >
 				<input type="text" id="newQ"/>
-				<input type="text" id="newQ" placeholder="Enter question here"/>
+				<input type="text" id="newD" placeholder="Enter question here"/>
 				<Button class="add">Ask</Button>
 		</div>
 		
@@ -91,11 +97,12 @@
 		</div>
   {{/if}}
 
+
 </template>
 
 <template name="question">
   <div class="question {{selected}}">
-    <span class="q">{{q}}</span>
+	<span class="q">{{q}}</span>
     <span class="score">{{score}}</span>
 	{{#if currentUser}}
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>

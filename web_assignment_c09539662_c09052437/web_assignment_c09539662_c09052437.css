@@ -41,6 +41,15 @@ body {
 	margin-left: 8px;
 }
 
+.desc {
+display: inline-block;
+    width: 300px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold
+	}
+
+
 .question {
     cursor: pointer;
     padding: 8px;
@@ -72,6 +81,7 @@ body {
 
 .question.selected {
     background-color: #6699CC;
+	width: 600px;
 }
 
 .question.selected .score {
