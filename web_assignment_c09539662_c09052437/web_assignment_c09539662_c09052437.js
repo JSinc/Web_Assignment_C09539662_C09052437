@@ -25,6 +25,7 @@ if (Meteor.isServer) {
 Questions = new Meteor.Collection("questions");
 
 if (Meteor.isClient) {
+	
   Template.web_assignment_c09539662_c09052437.questions = function () {
     return Questions.find({}, {sort: {score: -1, q: 1}});
   };
@@ -75,6 +76,11 @@ if (Meteor.isClient) {
 // On server startup, create some players if the database is empty.
 if (Meteor.isServer) {
   Meteor.startup(function () {
+						   // first, remove configuration entry in case service is already configured
+Accounts.loginServiceConfiguration.remove({
+  service: "google"
+});
+
     if (Questions.find().count() === 0) {
       var qs = ["Alri?",
                    "Story?",
