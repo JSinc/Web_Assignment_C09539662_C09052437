@@ -50,10 +50,22 @@ if (Meteor.isClient) {
     }
   });
     Template.web_assignment_c09539662_c09052437.events({
-	'click Button.add': function ()
-	{
+	'click Button.add': function () {
 	var newQ = document.getElementById("newQ").value; 
+	if (newQ.length < 80)
+	{
 	Questions.insert({q: newQ, score: 0});
+	}
+	else
+	{
+		window.alert("Question title is too long");
+	}
+	}
+	});
+	Template.web_assignment_c09539662_c09052437.events({
+	'click Button.del': function ()
+	{ 
+	Questions.remove(Session.get("selected_q"));
 	}
 	});
 
