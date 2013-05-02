@@ -68,31 +68,28 @@
 </body>
 
 <template name="web_assignment_c09539662_c09052437">
-  <div class="web_assignment_c09539662_c09052437">
-    {{#each questions}}
-      {{> question}}
-    {{/each}}
-  </div>
-  
-  <div class="new_question">
-		<input type="text" id="newQ"/>
-		<input type ="button" class="add" value="Add Question"/>
+	<div class="web_assignment_c09539662_c09052437">
+    	{{#each questions}}
+			{{> question}}
+		{{/each}}
 	</div>
+ 
+		<div class="new-question" >
+				<input type="text" id="newQ"/>
+				<Button class="add">Ask</Button>
+		</div>
 
 </template>
 
 <template name="question">
   <div class="question {{selected}}">
-    <span class="name">{{q}}</span>
+    <span class="q">{{q}}</span>
     <span class="score">{{score}}</span>
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>
 	<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
   </div>
 </template>
 
-<template name="login">
-	
-</template>
 
 
 
