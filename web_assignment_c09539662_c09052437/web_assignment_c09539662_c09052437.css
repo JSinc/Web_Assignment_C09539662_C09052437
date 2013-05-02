@@ -1,7 +1,10 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 200;
+<<<<<<< HEAD
     margin: 0 0;
+=======
+>>>>>>> origin/Jody
     padding: 0;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -30,25 +33,47 @@ body {
 .app-title {
 	color:#FFFFFF;
 	font-size: 64px;
+<<<<<<< HEAD
+=======
+	margin-left: 8px;
+}
+
+.instruct {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	font-colour: #FFFFFF;
+	background-color:#CCCCCC;	
+	margin-left: 8px;
+>>>>>>> origin/Jody
 }
 
 .question {
     cursor: pointer;
     padding: 8px;
+<<<<<<< HEAD
+=======
+	padding-left:8px;
+>>>>>>> origin/Jody
 
 }
 
 .question .q {
     display: inline-block;
     width: 300px;
-    font-size: 1.75em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
 }
 
 .question .score {
     display: inline-block;
     width: 100px;
     text-align: right;
+<<<<<<< HEAD
     font-size: 1.75em;
+=======
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+>>>>>>> origin/Jody
     font-weight: bold;
     color: #000000;
 }
