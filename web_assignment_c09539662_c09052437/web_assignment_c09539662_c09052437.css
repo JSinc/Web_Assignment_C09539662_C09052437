@@ -1,7 +1,6 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 200;
-    margin: 0 0;
     padding: 0;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -30,25 +29,37 @@ body {
 .app-title {
 	color:#FFFFFF;
 	font-size: 64px;
+	margin-left: 8px;
+}
+
+.instruct {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	font-colour: #FFFFFF;
+	background-color:#CCCCCC;	
+	margin-left: 8px;
 }
 
 .question {
     cursor: pointer;
     padding: 8px;
+	padding-left:8px;
 
 }
 
 .question .q {
     display: inline-block;
     width: 300px;
-    font-size: 1.75em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
 }
 
 .question .score {
     display: inline-block;
     width: 100px;
     text-align: right;
-    font-size: 1.75em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
     font-weight: bold;
     color: #000000;
 }
