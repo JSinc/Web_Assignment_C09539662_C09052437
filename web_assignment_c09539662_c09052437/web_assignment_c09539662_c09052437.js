@@ -50,7 +50,7 @@ if (Meteor.isClient) {
     }
   });
     Template.web_assignment_c09539662_c09052437.events({
-	'click input.add': function ()
+	'click Button.add': function ()
 	{
 	var newQ = document.getElementById("newQ").value;
 	Questions.insert({q: newQ, score: 0});
