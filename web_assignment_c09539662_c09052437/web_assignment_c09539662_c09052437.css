@@ -39,6 +39,21 @@ body {
 	color:#FFFFFF;
 }
 
+.content-contain{
+	width:1000px;
+}
+
+.left-contain{
+	width:600px;
+	float:left;
+}
+
+.right-contain{
+	width:400px;
+	float:left;
+
+}	
+
 .instruct {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -68,7 +83,7 @@ body {
 
 .question .score {
     display: inline-block;
-    width: 100px;
+    width: 50px;
     text-align: right;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -78,11 +93,13 @@ body {
 
 .new-question {
 	display:inline-block;
+	padding-top: 10px;
 	padding-left: 50px;
 }
 
 .question.selected {
     background-color: #6699CC;
+	width:600px;
 }
 
 .question.selected .score {
