@@ -16,7 +16,12 @@
 
 	<div id="app-title" class="header">
 		<span class="login"><div align="right">{{loginButtons}}</div></span>
+		
+		{{#if currentUser}}
 		<span class="app-title">Ask Your Lecturer</span>
+		{{else}}
+		<span class="app-title">Sign in, you fuck</span>
+		{{/if}}
 	</div>
 <!--
   <div class="loginGoogle">
@@ -74,7 +79,7 @@
 			{{> question}}
 		{{/each}}
 	</div>
- 
+ {{#if currentUser}}
 		<div class="new-question" >
 				<input type="text" id="newQ"/>
 				<input type="text" id="newQ" placeholder="Enter question here"/>
@@ -84,6 +89,7 @@
 		<div class="delete-question">
 			<Button class="del">Delete</Button>
 		</div>
+  {{/if}}
 
 </template>
 
@@ -91,8 +97,10 @@
   <div class="question {{selected}}">
     <span class="q">{{q}}</span>
     <span class="score">{{score}}</span>
+	{{#if currentUser}}
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>
 	<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
+	{{/if}}
   </div>
 </template>
 
