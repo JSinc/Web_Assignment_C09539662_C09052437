@@ -16,7 +16,7 @@
 
 	<div id="app-title" class="header">
 		<span class="login"><div align="right">{{loginButtons}}</div></span>
-		<span class="app-title">Ask Your Lecturer</span>
+		<span class="app-title">Ask A Question</span>
 	</div>
 <!--
   <div class="loginGoogle">
@@ -33,9 +33,8 @@
 	</div>
 	-->
   <div id="q-section">
-  	<span class="instruct">Select a question to view it</span>
-  
-    {{> web_assignment_c09539662_c09052437}} 
+  	<div id="inst" class="contain"><span class="instruct">Select a question to view it</span></div>
+	    {{> web_assignment_c09539662_c09052437}} 
 	
   </div>
 
@@ -83,12 +82,14 @@
 </template>
 
 <template name="question">
+
   <div class="question {{selected}}">
-    <span class="q">{{q}}</span>
+    <span class="bubble"><span class="q">{{q}}</span></span>
     <span class="score">{{score}}</span>
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>
 	<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
   </div>
+  
 </template>
 
 
