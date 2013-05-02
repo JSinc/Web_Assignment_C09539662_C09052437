@@ -42,17 +42,19 @@ body {
     display: inline-block;
     width: 300px;
     font-size: 1.75em;
-	border: 2px;
-	border-color: #FFFFFF;
 }
 
 .question .score {
     display: inline-block;
     width: 100px;
     text-align: right;
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: bold;
     color: #000000;
+}
+
+.new-question {
+	display:inline-block;
 }
 
 .question.selected {
