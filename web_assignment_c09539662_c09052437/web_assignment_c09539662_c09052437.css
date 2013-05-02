@@ -28,17 +28,41 @@ body {
 }
 
 .app-title {
+	font-variant:small-caps;
 	color:#FFFFFF;
 	font-size: 64px;
 	margin-left: 8px;
 }
 
+.contain{
+	height:auto;
+	background-color:#666665;
+	color:#FFFFFF;
+}
+
+.content-contain{
+	width:1000px;
+}
+
+.left-contain{
+	width:600px;
+	float:left;
+}
+
+.right-contain{
+	width:400px;
+	float:left;
+
+}	
+
 .instruct {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 10px;
-	font-colour: #FFFFFF;
-	background-color:#CCCCCC;	
-	margin-left: 8px;
+	font-size: 16px;
+	font-weight:bold;
+	font-variant:small-caps;
+	colour: #FFFFFF;
+	background-color:#666665;	
+	margin-left: 25px;
 }
 
 .desc {
@@ -53,35 +77,44 @@ display: inline-block;
 .question {
     cursor: pointer;
     padding: 8px;
-	padding-left:8px;
-
+	padding-left:50px;
+	
 }
 
 .question .q {
     display: inline-block;
-    width: 300px;
+    width: 400px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 16px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	
 }
 
 .question .score {
     display: inline-block;
-    width: 100px;
+    width: 50px;
     text-align: right;
     font-size: 1.75em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 16px;
     font-weight: bold;
     color: #000000;
 }
 
 .new-question {
 	display:inline-block;
+	padding-top: 10px;
+	padding-left: 50px;
 }
 
 .question.selected {
     background-color: #6699CC;
+<<<<<<< HEAD
 	width: 600px;
+=======
+	width:600px;
+>>>>>>> origin/Jody
 }
 
 .question.selected .score {
@@ -108,4 +141,15 @@ display: inline-block;
 
 .dec{
 cursor: pointer;
+}
+
+.bubble
+{
+position: relative;
+height: auto;
+padding: 8px;
+background: #EEEEEE;
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px;
 }

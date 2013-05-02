@@ -8,69 +8,36 @@
   <input type="button" value="Click" />
 </template>
 -->
+
 <head>
   <title>Web Assignment - C09539662 & C09052437</title>
 </head>
 
 <body>
-
+	
 	<div id="app-title" class="header">
 		<span class="login"><div align="right">{{loginButtons}}</div></span>
+<<<<<<< HEAD
 		
 		{{#if currentUser}}
 		<span class="app-title">Ask Your Lecturer</span>
 		{{else}}
 		<span class="app-title">Sign in, you fuck</span>
 		{{/if}}
+=======
+		<span class="app-title">Ask A Question</span>
+>>>>>>> origin/Jody
 	</div>
-<!--
-  <div class="loginGoogle">
-	<span id="signinButton">
-	  <span
-		class="g-signin"
-		data-callback="signinCallback"
-		data-clientid="783577748341.apps.googleusercontent.com"
-		data-cookiepolicy="single_host_origin"
-		data-requestvisibleactions="http://schemas.google.com/AddActivity"
-		data-scope="https://www.googleapis.com/auth/plus.login">
-	  </span>
-	</span>
-	</div>
-	-->
-  <div id="q-section">
-  	<span class="instruct">Select a question to view it</span>
-  
-    {{> web_assignment_c09539662_c09052437}} 
 	
-  </div>
-
-  <!--
-<script type="text/javascript">
-      (function() {
-       var po = document.createElement('script'); 
-	   po.type = 'text/javascript'; po.async = true;
-       po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
-	 
-	 function signinCallback(authResult) {
-  if (authResult['access_token']) {
-    // Successfully authorized
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else if (authResult['error']) {
-    // There was an error.
-    // Possible error codes:
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    // console.log('There was an error: ' + authResult['error']);
-  }
-}
-
-    </script>-->
-	 
-
-
+	<div id="inst" class="contain">
+		<span class="instruct">Select a question to view it</span>
+	</div>
+	
+<div id="container" style="height:800px;width:1000px">	
+	<div id="left-container" style="width:600px;float:left;">{{> web_assignment_c09539662_c09052437}}</div>
+	<div id="right-container" style="width:400px;float:left"><!--this is where the selected question and description will go-->lololol</div>
+</div>	
+	
 </body>
 
 <template name="web_assignment_c09539662_c09052437">
@@ -87,8 +54,12 @@
 	</div>
  {{#if currentUser}}
 		<div class="new-question" >
+<<<<<<< HEAD
 				<input type="text" id="newQ"/>
 				<input type="text" id="newD" placeholder="Enter question here"/>
+=======
+				<input type="textarea" rows="3" id="newQ" placeholder="Enter question here"/>
+>>>>>>> origin/Jody
 				<Button class="add">Ask</Button>
 		</div>
 		
@@ -101,14 +72,20 @@
 </template>
 
 <template name="question">
+
   <div class="question {{selected}}">
+<<<<<<< HEAD
 	<span class="q">{{q}}</span>
+=======
+    <span class="bubble"><span class="q">{{q}}</span></span>
+>>>>>>> origin/Jody
     <span class="score">{{score}}</span>
 	{{#if currentUser}}
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>
 	<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
 	{{/if}}
   </div>
+  
 </template>
 
 
