@@ -110,7 +110,6 @@ display: inline-block;
 
 .question.selected {
     background-color: #6699CC;
-	width: 500px;
 }
 
 .question.selected .score {
