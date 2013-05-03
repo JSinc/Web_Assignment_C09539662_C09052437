@@ -1,14 +1,3 @@
-<!--<body>
-  {{> hello}}
-</body>
-
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
--->
-
 <head>
   <title>Web Assignment - C09539662 & C09052437</title>
 </head>
@@ -17,16 +6,13 @@
 	
 	<div id="app-title" class="header">
 		<span class="login"><div align="right">{{loginButtons}}</div></span>
-<<<<<<< HEAD
 		
 		{{#if currentUser}}
-		<span class="app-title">Ask Your Lecturer</span>
+		<span class="app-title">Ask A Question</span>
 		{{else}}
 		<span class="app-title">Sign in, you fuck</span>
 		{{/if}}
-=======
-		<span class="app-title">Ask A Question</span>
->>>>>>> origin/Jody
+
 	</div>
 	
 	<div id="inst" class="contain">
@@ -54,12 +40,8 @@
 	</div>
  {{#if currentUser}}
 		<div class="new-question" >
-<<<<<<< HEAD
 				<input type="text" id="newQ"/>
 				<input type="text" id="newD" placeholder="Enter question here"/>
-=======
-				<input type="textarea" rows="3" id="newQ" placeholder="Enter question here"/>
->>>>>>> origin/Jody
 				<Button class="add">Ask</Button>
 		</div>
 		
@@ -74,11 +56,8 @@
 <template name="question">
 
   <div class="question {{selected}}">
-<<<<<<< HEAD
 	<span class="q">{{q}}</span>
-=======
     <span class="bubble"><span class="q">{{q}}</span></span>
->>>>>>> origin/Jody
     <span class="score">{{score}}</span>
 	{{#if currentUser}}
 	<Button class="inc"><i class="icon-thumbs-up"></i></Button>

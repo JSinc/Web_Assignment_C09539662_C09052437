@@ -110,11 +110,7 @@ display: inline-block;
 
 .question.selected {
     background-color: #6699CC;
-<<<<<<< HEAD
 	width: 600px;
-=======
-	width:600px;
->>>>>>> origin/Jody
 }
 
 .question.selected .score {
