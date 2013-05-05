@@ -10,7 +10,7 @@
 		{{#if currentUser}}
 		<span class="app-title">Ask A Question</span>
 		{{else}}
-		<span class="app-title">Sign in, you fuck</span>
+		<span class="app-title">Sign in to ask a question</span>
 		{{/if}}
 
 	</div>
@@ -19,25 +19,23 @@
 		<span class="instruct">Select a question to view it</span>
 	</div>
 	
-<div id="container" style="height:800px;width:1000px">	
-	<div id="left-container" style="width:600px;float:left;">{{> web_assignment_c09539662_c09052437}}</div>
-	<div id="right-container" style="width:400px;float:left"><!--this is where the selected question and description will go-->lololol</div>
-</div>	
-	
+	{{> web_assignment_c09539662_c09052437}}
 </body>
 
 <template name="web_assignment_c09539662_c09052437">
-	<div class="web_assignment_c09539662_c09052437">
-    	{{#each questions}}
+
+<div id="container" style="height:800px;width:1000px">	
+	<div id="left-container" style="width:600px;float:left;">{{#each questions}}
 			{{> question}}
-		{{/each}}
-{{#if selected_desc}}
-	<div style="float: right; width: 50%" class="blah">
+		{{/each}}</div>
+	<div id="right-container" style="width:400px;float:left">{{#if selected_desc}}
+	
 		<div class="desc">{{selected_q}}</div>
 		<div class="q">{{selected_desc}}</div>
-	</div>
-{{/if}}
-	</div>
+	
+{{/if}}</div>
+	
+	
  {{#if currentUser}}
 		<div class="new-question" >
 				<input type="text" id="newQ"/>
