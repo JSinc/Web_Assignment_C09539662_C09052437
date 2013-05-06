@@ -1,0 +1,16 @@
+** Rich Web Assignment - DT 228/4
+** Jody Sinclair - C09539662 & Keith Hagan - C09052437
+** Application for students to ask questions in class and vote them up
+** or down allowing the lecturer to view the most requested question.
+** Users can only vote up and down 5 times each and must sign in before
+** viewing or accessing content.
+
+1 - Sign in *MUST BE DONE TO BE ABLE TO ACCESS MAIN FUNCTIONALITY OF APP*
+2 - Add a question
+3 - Select a question
+4 - View Question
+5 - Delete a question
+6 - Vote up question (limited to 5 times)
+7 - Vote down question (limited to 5 times)
+
+App is currently hosted at: https://webassignjodyandkeith.meteor.com
