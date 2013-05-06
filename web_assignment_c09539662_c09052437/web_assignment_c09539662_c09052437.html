@@ -1,69 +1,120 @@
+<!-- Rich Web Assignment - DT 228/4
+---- Jody Sinclair - C09539662 & Keith Hagan - C09052437
+---- Application for students to ask questions in class and vote them up
+---- or down allowing the lecturer to view the most requested question.
+---- Users can only vote up and down 5 times each and must sign in before
+---- viewing or accessing content.
+-->
 <head>
   <title>Web Assignment - C09539662 & C09052437</title>
 </head>
 
 <body>
-	
+	<!--Header section giving instructions to user or displaying the title if they are loggged in-->
 	<div id="app-title" class="header">
 		<span class="login"><div align="right">{{loginButtons}}</div></span>
-		
 		{{#if currentUser}}
-		<span class="app-title">Ask A Question</span>
+			<span class="app-title">Ask A Question</span>
 		{{else}}
-		<span class="app-title">Sign in to ask a question</span>
+			<span class="app-title">Plase sign in to use app</span>
 		{{/if}}
-
 	</div>
 	
 	<div id="inst" class="contain">
-		<span class="instruct">Select a question to view it</span>
+		<span class="instruct">Ask a question below or select a question to view it</span>
 	</div>
+	<!--end of the header section-->
 	
+	<!--questions content-->
 	{{> web_assignment_c09539662_c09052437}}
+	<!-- end of questions content-->
+	
 </body>
 
+<!--Template for questions content-->
 <template name="web_assignment_c09539662_c09052437">
-
-<div id="container" style="height:800px;width:1000px">	
-	<div id="left-container" style="width:600px;float:left;">{{#each questions}}
-			{{> question}}
-		{{/each}}</div>
-	<div id="right-container" style="width:400px;float:left">{{#if selected_desc}}
+	<!--A container for the overall content-->
+	<div id="container" style="height:800px;width:1300px">
 	
-		<div class="desc">{{selected_q}}</div>
-		<div class="q">{{selected_desc}}</div>
-	
-{{/if}}</div>
-	
-	
- {{#if currentUser}}
-		<div class="new-question" >
-				<input type="text" id="newQ"/>
-				<input type="text" id="newD" placeholder="Enter question here"/>
-				<Button class="add">Ask</Button>
+		<!--container for entering a new question-->
+		<div id="newq-contain" style="width:300px; height:650px; float:left;">
+			<br />
+			<div class="subtitle" align="center">Ask</div>
+			<!--User can only access these if they are logged in-->
+			{{#if currentUser}}
+				<!--New question section-->
+				<div class="new-question" >
+						<input type="text" id="newQ" placeholder="Enter question title here" maxlength="50"/>
+						<br />
+						<textarea id="newD" placeholder="Enter question description here" rows="8" maxlength="280"/>
+						<br />
+						<div align="right"><span class="add"><Button class="btn btn-primary">Ask</Button></span></div>
+				</div>
+				<!--end of new question-->
+			{{/if}}
+		 	<!--end of if user logged in section-->
 		</div>
+		 <!--end of newq_container-->	
+	
+		<!--An inside container for the left side, displaying the q's titles-->
+		<div id="left-container" style="width:650px; height:500px; float:left;">
+			<br />
+			<div class="subtitle" align="center" style="height:32px;">Select</div>
+			<div class="inner-left" style="width:650px; height:478px; float:left; overflow:scroll;">
+				{{#each questions}}
+				{{> question}}
+				{{/each}}
+			</div>
+		</div>
+		<!--end of left containter-->
 		
-		<div class="delete-question">
-			<Button class="del">Delete</Button>
+		<!--An inside container displaying the selected q's title and description-->
+		<div id="right-container" style="width:300px; height:500px; float:left; padding-left: 5px;">
+			<br />
+			<div class="subtitle" align="center">View</div>
+			{{#if selected_desc}}	
+				<div class="q-title">{{selected_q}}</div>
+				<div class="desc">{{selected_desc}}</div>
+				
+				
+				<!--User can only access these if they are logged in-->
+		 		{{#if currentUser}}
+				<!--Delete question section-->
+					<div class="delete-question" align="right">
+						<span class="del"><Button class="btn btn-primary">Delete Question</Button></span>
+					</div>
+					<!--end of delete question-->
+				 {{/if}}
+				 <!--end of if user logged in section-->
+						
+			{{/if}}
+			<!--end of if selected_desc section-->
 		</div>
-  {{/if}}
-
-
+		<!--end of right container-->
+		
+		
+	</div>
+	<!--end of container-->
 </template>
+<!--end of main content template-->
 
+<!--Template for each question-->
 <template name="question">
 
-  <div class="question {{selected}}">
-    <span class="bubble"><span class="q">{{q}}</span></span>
-    <span class="score">{{score}}</span>
-	{{#if currentUser}}
-	<Button class="inc"><i class="icon-thumbs-up"></i></Button>
-	<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
-	{{/if}}
-  </div>
+	<!--Section that deals with selected questions-->
+	<div class="question {{selected}}">
+  		<span class="bubble"><span class="q">{{q}}</span></span>
+	    <span class="score">{{score}}</span>
+		
+		<!--User can only access these buttons if logged in-->
+		{{#if currentUser}}
+			<Button class="inc"><i class="icon-thumbs-up"></i></Button>
+			<Button class="dec"><i class="icon-thumbs-down"></i></Button>  
+		{{/if}}
+		<!--end of logged in if statement-->
+		
+	</div>
+	<!--end of selected question section-->
   
 </template>
-
-
-
-
+<!--end of selected question template-->
