@@ -102,9 +102,15 @@ if (Meteor.isServer) {
 
 		if (Questions.find().count() === 0) {
 			var qs = ["Alri?","Story?","spa","yeah"];
+			var ds = [
+						"Description goes here",
+						"Description goes here",
+						"Description goes here",
+						"Description goes here"
+					];
 		
 			for (var i = 0; i < qs.length; i++) {
-				Questions.insert({q: qs[i], desc: "", score: Math.floor(Random.fraction()*10)*5});
+				Questions.insert({q: qs[i], desc:ds[i], score: Math.floor(Random.fraction()*10)*5});
 			}
 		}
 	});
