@@ -1,22 +1,21 @@
+/* Rich Web Assignment - DT 228/4
+// Jody Sinclair - C09539662 & Keith Hagan - C09052437
+// Application for students to ask questions in class and vote them up
+// or down allowing the lecturer to view the most requested question.
+// Users can only vote up and down 5 times each and must sign in before
+// viewing or accessing content.
+*/
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 200;
     margin: 0 0;
     padding: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-#outer {
-    width: 800px;    
 }
 
 .header {
 	height: auto;
-	background-color:#000033;
+	background-color: #6699CC;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding-bottom: 5px;
 }
@@ -36,7 +35,7 @@ body {
 
 .contain{
 	height:auto;
-	background-color:#666665;
+	background-color: #AAAAAA;
 	color:#FFFFFF;
 }
 
@@ -46,14 +45,38 @@ body {
 
 .left-contain{
 	width:600px;
+	height: 500px;
 	float:left;
+	/*overflow:scroll;*/
+}
+
+.inner-left{
+	width:600px;
+	height: 500px;
+	float:left;
+	overflow:scroll;
 }
 
 .right-contain{
 	width:400px;
+	height: 600px;
 	float:left;
-
+	overflow:scroll;
 }	
+
+.newq-contain{
+	width:400px;
+	heigh: 600px;
+	float:left;
+	overflow:scroll;
+	padding-right:15px;
+}	
+
+.subtitle{
+	font-variant:small-caps;
+	color: #BBBBBB;
+	font-size: 32px;
+}
 
 .instruct {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -61,29 +84,38 @@ body {
 	font-weight:bold;
 	font-variant:small-caps;
 	colour: #FFFFFF;
-	background-color:#666665;	
 	margin-left: 25px;
 }
 
+.q-title {
+	display: inline-block;
+    width: 350px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top:8px;
+	padding-left:10px;
+}
+	
 .desc {
-display: inline-block;
+	display: inline-block;
     width: 300px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	font-weight: bold
-	}
+	padding-left: 10px;
+}
 
 
 .question {
     cursor: pointer;
     padding: 8px;
-	padding-left:50px;
+	padding-left:40px;
 	
 }
 
 .question .q {
     display: inline-block;
-    width: 400px;
+    width: 420px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	padding-bottom: 5px;
