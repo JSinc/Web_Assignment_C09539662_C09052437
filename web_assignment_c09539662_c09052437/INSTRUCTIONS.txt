@@ -13,4 +13,4 @@
 6 - Vote up question (limited to 5 times)
 7 - Vote down question (limited to 5 times)
 
-App is currently hosted at: https://webassignjodyandkeith.meteor.com
+App is currently hosted at: https://jsandkhwebassign.meteor.com/.meteor.com
